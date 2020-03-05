@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+import AboutPic from '../../static/img/newabout.png'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -19,51 +21,45 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
+        background: `linear-gradient(rgba(29,33,62,.8),rgba(29,33,62,.8)),
+        url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+      <div className="container">
+      <div class="columns">
+            <div class="column is-three-fifths" style={{
+              color: "#ffffff"
+            }}>
+              <h1>{ title }</h1>
+              
+              <Link to="/" className="column">{ subheading }</Link>
+              
+              </div>
+            <div class="column">Auto</div>
+            <div class="column">Auto</div>
+      </div>
       </div>
     </div>
+    <section className="section about-tab">
+  <div className="container">
+  <div class="columns is-vcentered is-centered">
+  <div class="column is-8">
+    <img src={ AboutPic } alt="about pic" />
+  </div>
+  <div class="column">
+          <h2> { mainpitch.title } </h2>
+          <p class="bd-notification is-primary">{ mainpitch.description }</p>
+  </div>
+</div>
+  </div>
+</section>       
+
+
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">

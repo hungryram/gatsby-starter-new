@@ -35,9 +35,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-transparent trans-bg"
         role="navigation"
         aria-label="main-navigation"
+        style={{
+          backgroundColor: `transparent`,
+          borderBottom: `2px solid rgba(255, 255, 255, 0.07)`,
+          padding: `20px 0`
+        }}
       >
         <div className="container">
           <div className="navbar-brand">
