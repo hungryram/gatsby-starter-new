@@ -2,7 +2,7 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #37b6ed
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
@@ -51,21 +51,43 @@ $black: #2b2523
     align-items: center
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: transparent
+    text-transform: uppercase
+    padding: 12px 0px 10px
     font-size: 18px
     font-size: 1rem
     line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: #CC3700
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
     -webkit-transition: all .15s ease
     transition: all .15s ease
+    color: #000000
+
+    &:hover .btn-circle
+      padding: 15px
+      -webkit-transition: .2s ease-in-out
+      -o-transition: .2s ease-in-out
+      -moz-transition: .2s ease-in-out
+      transition: .2s ease-in-out
+
+
+.btn-circle
+  color: $kaldi-red
+  font-size: 60px
+  margin-right: -30px
+      -webkit-transition: .2s ease-in-out
+      -o-transition: .2s ease-in-out
+      -moz-transition: .2s ease-in-out
+      transition: .2s ease-in-out
+
+.btn-arrow
+  color: $kaldi-red
+  margin-left: 10px
+
 
 .margin-top-0
   margin-top: 0 !important
@@ -81,7 +103,6 @@ $black: #2b2523
   padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
-  background-color: transparent
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -156,7 +177,60 @@ h1
 .navbar-item
   color: #ffffff
 
-
+// ABOUT
 .about-tab
   background: url(../../static/img/aboutbg2.jpg) no-repeat center
   background-size: cover
+
+
+// SERVICES
+.service-one,
+.service-two,
+.service-three
+  margin: 5px
+  height: 35rem
+  
+
+.service-one
+  background: url(../../static/img/f1.jpg) no-repeat center
+  background-size: cover
+
+.service-two
+  background: url(../../static/img/f2.jpg) no-repeat center
+  background-size: cover
+
+.service-three
+  background: url(../../static/img/f3.jpg) no-repeat center
+  background-size: cover
+
+footer
+  background-color: #181a31
+  padding-top: 50px
+
+footer div h3
+  color: #37b6ed!important
+
+.footer-links
+  padding-top: 50px
+
+.footer-copy
+  background-color: #37b6ed
+  padding: 20px 0
+
+.process-tab
+  background-color: #19181c
+  color: #ffffff
+
+.process-content
+  padding: 50px 0
+
+.facircle
+  color: #37b6ed
+
+.service-box-wrap
+  padding-top: 50px
+
+.service-box
+  border: 1px solid #434343
+  margin: 5px
+  padding: 50px

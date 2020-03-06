@@ -8,6 +8,9 @@ import BlogRoll from '../components/BlogRoll'
 
 import AboutPic from '../../static/img/newabout.png'
 
+import { FaCircle } from 'react-icons/fa'
+import { FaLongArrowAltRight } from 'react-icons/fa'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -36,7 +39,13 @@ export const IndexPageTemplate = ({
             }}>
               <h1>{ title }</h1>
               
-              <Link to="/" className="column">{ subheading }</Link>
+              <Link to="/" className="btn" style={{
+            justifyContent: `left`,
+            color: `#ffffff`,
+            letterSpacing: `2px`,
+            fontWeight: `400`,
+            paddingTop: `50px`
+          }}><FaCircle className="btn-circle"/>View Case Studies <FaLongArrowAltRight className="btn-arrow" /></Link>
               
               </div>
             <div class="column">Auto</div>
@@ -44,19 +53,69 @@ export const IndexPageTemplate = ({
       </div>
       </div>
     </div>
-    <section className="section about-tab">
+<section className="section about-tab">
   <div className="container">
-  <div class="columns is-vcentered is-centered">
-  <div class="column is-8">
-    <img src={ AboutPic } alt="about pic" />
-  </div>
-  <div class="column">
+    <div class="columns is-vcentered is-centered">
+      <div class="column is-8">
+        <img src={ AboutPic } alt="about pic" />
+      </div>
+      <div class="column">
           <h2> { mainpitch.title } </h2>
           <p class="bd-notification is-primary">{ mainpitch.description }</p>
+          <Link to="/" className="btn" style={{
+            justifyContent: `left`
+          }}><FaCircle className="btn-circle"/>Learn more <FaLongArrowAltRight className="btn-arrow" /></Link>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<section className="section services-tab">
+  <div className="container">
+    <div class="columns is-vcentered">
+      <div class="column is-3 has-text-centered">
+        <h2>OUR SERVICES</h2>
+        <p>Elit esse commodo ullamco enim aliqua cupidatat. Magna veniam sint qui labore. Pariatur mollit tempor non fugiat aliquip exercitation ex nisi nostrud. Deserunt commodo laborum Lorem voluptate est est cupidatat esse ut labore. Aute esse aliqua eiusmod quis enim voluptate labore veniam. Non exercitation reprehenderit irure ut sit.</p>
+      </div>
+      <div class="column is-3 has-text-centered service-one">Service 1</div>
+      <div class="column is-3 has-text-centered service-two">Service 2</div>
+      <div class="column is-3 has-text-centered service-three">Service 3</div>
+    </div>
   </div>
-</section>       
+</section>
+
+
+<section className="section process-tab">
+  <div className="container process-content">
+    <div class="columns is-vcentered is-centered">
+      <div class="column is-8">
+        <h3>Our Process</h3>
+      </div>
+      <div class="column">
+          <h2> { mainpitch.title } </h2>
+          <p class="bd-notification is-primary">{ mainpitch.description }</p>
+      </div>
+    </div>
+    <div class="columns service-box-wrap">
+      <div class="column is-4 service-box">
+        <h2>Discover</h2>
+        <br /><span className="facircle"><FaCircle /></span><br />
+        <p>Commodo esse qui consequat et magna eu pariatur et dolore incididunt et laborum anim. Elit est qui eu ipsum. Dolor non mollit laboris veniam laboris duis incididunt fugiat velit sunt id nostrud. Eu velit aliqua aute aliqua.</p>
+      </div>
+      <div class="column is-4 service-box">
+      <h3>Discover</h3>
+        <br /><span className="facircle"><FaCircle /></span><br />
+        <p>Commodo esse qui consequat et magna eu pariatur et dolore incididunt et laborum anim. Elit est qui eu ipsum. Dolor non mollit laboris veniam laboris duis incididunt fugiat velit sunt id nostrud. Eu velit aliqua aute aliqua.</p>
+      </div>
+      <div class="column is-4 service-box">
+      <h3>Discover</h3>
+        <br /><span className="facircle"><FaCircle /></span><br />
+        <p>Commodo esse qui consequat et magna eu pariatur et dolore incididunt et laborum anim. Elit est qui eu ipsum. Dolor non mollit laboris veniam laboris duis incididunt fugiat velit sunt id nostrud. Eu velit aliqua aute aliqua.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -66,38 +125,16 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      View all products
-                    </Link>
-                  </div>
-                </div>
+               
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Helpful Blogs
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
+                  
                     <Link className="btn" to="/blog">
-                      Read more
+                      <FaCircle className="btn-circle"/>Read more <FaLongArrowAltRight className="btn-arrow" />
                     </Link>
                   </div>
                 </div>
